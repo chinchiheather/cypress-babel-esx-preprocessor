@@ -1,0 +1,31 @@
+{
+  "name": "cypress-babel-es-all",
+  "version": "1.0.0",
+  "description": "Cypress plugin to allow you to use all proposals to the JavaScript language at Proposal stage or above by using babel-preset-stage-1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cypress",
+    "cypress-plugin",
+    "es2015",
+    "es2016",
+    "es2017",
+    "es6",
+    "es7",
+    "babel",
+    "babel-preset-stage-1",
+    "babel-preset-stage-2",
+    "babel-preset-stage-3"
+  ],
+  "author": {
+    "name": "Heather Roberts",
+    "email": "heather.roberts427@gmail.com"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@cypress/browserify-preprocessor": "^1.0.2",
+    "babel-preset-stage-1": "^6.24.1"
+  }
+}
