@@ -6,7 +6,8 @@
   "scripts": {
     "lint": "eslint index.js index.spec.js",
     "test": "mocha --reporter spec \"test/index.spec.js\"",
-    "test:watch": "npm test -- --watch"
+    "test:watch": "npm test -- --watch",
+    "prepublish": "npm run lint && npm test"
   },
   "repository": {
     "type": "git",
