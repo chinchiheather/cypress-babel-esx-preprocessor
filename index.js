@@ -1,7 +1,7 @@
 const browserifyPreprocessor = require('@cypress/browserify-preprocessor');
 const resolve = require('resolve');
 
-const resolveFile = (name) => resolve.sync(name, { basedir: __dirname });
+const resolveFile = name => resolve.sync(name, { basedir: __dirname });
 
 const preprocessor = (babelOptions = {}, options = browserifyPreprocessor.defaultOptions) => (file) => {
   let presets = ['babel-preset-env', 'babel-preset-stage-1'];
