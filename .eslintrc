@@ -5,6 +5,7 @@
         "indent": ["error", 2],
         "linebreak-style": ["error", "unix"],
         "max-len": ["error", 120],
+        "no-mixed-operators": 0,
         "no-param-reassign": 0,
         "no-tabs": 2,
         "no-undef": 1,

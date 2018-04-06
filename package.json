@@ -4,7 +4,9 @@
   "description": "Cypress plugin to allow you to use all proposals to the JavaScript language at Proposal stage or above by using babel-preset-stage-1 as well as all JavaScript that has been finalised in the ECMA standard by using babel-preset-env",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint index.js"
+    "lint": "eslint index.js index.spec.js",
+    "test": "mocha --reporter spec \"test/index.spec.js\"",
+    "test:watch": "npm test -- --watch"
   },
   "repository": {
     "type": "git",
@@ -31,11 +33,15 @@
   "dependencies": {
     "@cypress/browserify-preprocessor": "^1.0.2",
     "babel-preset-env": "^1.6.1",
-    "babel-preset-stage-1": "^6.24.1"
+    "babel-preset-stage-1": "^6.24.1",
+    "resolve": "^1.6.0"
   },
   "devDependencies": {
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.10.0",
+    "mocha": "^5.0.5",
+    "mockery": "^2.1.0",
+    "sinon": "^4.5.0"
   }
 }

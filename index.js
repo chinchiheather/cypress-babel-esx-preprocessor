@@ -1,17 +1,20 @@
-const browserify = require('@cypress/browserify-preprocessor');
+const browserifyPreprocessor = require('@cypress/browserify-preprocessor');
+const resolve = require('resolve');
 
-const preprocessor = (babelOptions = {}, options = browserify.defaultOptions) => (file) => {
+const preprocessor = (babelOptions = {}, options = browserifyPreprocessor.defaultOptions) => (file) => {
   let presets = ['babel-preset-env', 'babel-preset-stage-1'];
-  if (babelOptions.presets) {
-    presets = [...presets, babelOptions.presets];
+  if (babelOptions && babelOptions.presets) {
+    presets = [...presets, ...babelOptions.presets];
   }
-  presets = presets.map(require.resolve);
+  presets = presets.map(resolve);
 
-  const plugins = babelOptions.plugins || [];
+  let plugins = babelOptions && babelOptions.plugins || [];
+  plugins = plugins.map(resolve);
 
   options.browserifyOptions.transform[1][1].presets = presets;
   options.browserifyOptions.transform[1][1].plugins = plugins;
-  return browserify(options)(file);
+
+  return browserifyPreprocessor(options)(file);
 };
 
 module.exports = preprocessor;
