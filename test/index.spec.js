@@ -41,7 +41,7 @@ describe('cypress-babel-esx', () => {
     resolveSpy = sinon.spy(filePath => filePath);
 
     mockery.registerMock('@cypress/browserify-preprocessor', browserifySpy);
-    mockery.registerMock('resolve', resolveSpy);
+    mockery.registerMock('resolve', { sync: resolveSpy });
   });
 
   after(() => {
