@@ -1,5 +1,5 @@
 {
-  "name": "cypress-babel-esx",
+  "name": "cypress-babel-esx-preprocessor",
   "version": "1.0.0",
   "description": "Cypress plugin to allow you to use all proposals to the JavaScript language at Proposal stage or above by using babel-preset-stage-1 as well as all JavaScript that has been finalised in the ECMA standard by using babel-preset-env",
   "main": "index.js",
@@ -11,20 +11,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chinchiheather/cypress-babel-esx.git"
+    "url": "git+https://github.com/chinchiheather/cypress-babel-esx-preprocessor.git"
   },
   "keywords": [
     "cypress",
     "cypress-plugin",
+    "cypress-preprocessor",
     "es2015",
     "es2016",
     "es2017",
-    "es6",
-    "es7",
     "babel",
     "babel-preset-stage-1",
-    "babel-preset-stage-2",
-    "babel-preset-stage-3"
+    "babel-preset-env"
   ],
   "author": {
     "name": "Heather Roberts",

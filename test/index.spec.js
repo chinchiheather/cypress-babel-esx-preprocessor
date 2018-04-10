@@ -3,7 +3,7 @@ const mockery = require('mockery');
 
 /* eslint-env mocha */
 
-describe('cypress-babel-esx', () => {
+describe('cypress-babel-esx-preprocessor', () => {
   const cypressBabelEsX = (file, options, browserifyOptions) => {
     const preprocessor = require('../index');
     return preprocessor(options, browserifyOptions)(file);
