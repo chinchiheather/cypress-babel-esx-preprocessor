@@ -1,6 +1,6 @@
 {
   "name": "cypress-babel-esx-preprocessor",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Cypress plugin to allow you to use all proposals to the JavaScript language at Proposal stage or above by using babel-preset-stage-1 as well as all JavaScript that has been finalised in the ECMA standard by using babel-preset-env",
   "main": "index.js",
   "scripts": {
